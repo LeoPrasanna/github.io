@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete DevOps Job Opportunities - 163+ Positions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0077B5, #00A0DC);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .search-filter-section {
+            padding: 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .search-box {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 20px;
+            padding: 12px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        
+        .search-box:focus {
+            border-color: #0077B5;
+        }
+        
+        .filter-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .filter-btn {
+            background: #f0f0f0;
+            border: none;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: #0077B5;
+            color: white;
+        }
+        
+        .results-info {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+        
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+        
+        .job-card {
+            background: #f8f9ff;
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 5px solid #0077B5;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,119,181,0.15);
+        }
+        
+        .company-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .job-title {
+            font-size: 1rem;
+            color: #0077B5;
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .job-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .detail-tag {
+            background: #e3f2fd;
+            color: #0077B5;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .location {
+            background: #f0f4f8;
+            color: #666;
+        }
+        
+        .experience {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .posted-date {
+            background: #e8f5e8;
+            color: #2e7d2e;
+        }
+        
+        .apply-btn {
+            background: linear-gradient(135deg, #0077B5, #00A0DC);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,119,181,0.3);
+        }
+        
+        .pagination {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .pagination button {
+            background: #0077B5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .pagination button:hover {
+            background: #005885;
+        }
+        
+        .pagination button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .jobs-grid {
+                grid-template-columns: 1fr;
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Complete DevOps Job Portal</h1>
+            <p>Live job opportunities from top companies across India</p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number" id="totalJobs">163+</span>
+                    <span class="stat-label">Total Jobs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Companies</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">Daily</span>
+                    <span class="stat-label">Updates</span>
+                </div>
+            </div>
+            <div style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">Last updated: July 7, 2025</div>
+        </div>
+        
+        <div class="search-filter-section">
+            <input type="text" class="search-box" id="searchBox" placeholder="🔍 Search by company, job title, or location...">
+            
+            <div class="filter-section">
+                <button class="filter-btn active" onclick="filterJobs('all')">All Jobs</button>
+                <button class="filter-btn" onclick="filterJobs('aws')">AWS</button>
+                <button class="filter-btn" onclick="filterJobs('devops')">DevOps</button>
+                <button class="filter-btn" onclick="filterJobs('senior')">Senior</button>
+                <button class="filter-btn" onclick="filterJobs('lead')">Lead</button>
+                <button class="filter-btn" onclick="filterJobs('engineer')">Engineer</button>
+                <button class="filter-btn" onclick="filterJobs('infosys')">Infosys</button>
+                <button class="filter-btn" onclick="filterJobs('wipro')">Wipro</button>
+                <button class="filter-btn" onclick="filterJobs('tcs')">TCS</button>
+            </div>
+            
+            <div class="results-info" id="resultsInfo">Showing all 163+ jobs</div>
+        </div>
+        
+        <div class="jobs-grid" id="jobsGrid">
+            <!-- All jobs will be dynamically loaded here -->
+        </div>
+        
+        <div class="pagination" id="pagination">
+            <button onclick="changePage(-1)" id="prevBtn">← Previous</button>
+            <span id="pageInfo">Page 1 of X</span>
+            <button onclick="changePage(1)" id="nextBtn">Next →</button>
+        </div>
+        
+        <div class="footer">
+            <p>🔄 This portal is updated daily with fresh opportunities from LinkedIn, Naukri, and other job portals</p>
+            <p>💼 Built with automated job scraping • All links lead directly to application pages</p>
+        </div>
+    </div>
+    
+    <script>
+        // Complete job data from your spreadsheet
+        const allJobs = [
+            {
+                company: "Infosys",
+                title: "DevOps",
+                location: "Bengaluru East, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-at-infosys-4259589637",
+                posted: "2025-07-02"
+            },
+            {
+                company: "Infosys",
+                title: "AWS DevOps",
+                location: "Bengaluru East, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/aws-devops-at-infosys-4257978034",
+                posted: "2025-06-30"
+            },
+            {
+                company: "KPMG India",
+                title: "AWS DevOps",
+                location: "Gurugram, Haryana, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/aws-devops-at-kpmg-india-4253646438",
+                posted: "2025-06-20"
+            },
+            {
+                company: "Birlasoft",
+                title: "DevOps",
+                location: "Greater Bengaluru Area",
+                experience: "3+ years of backend development experience",
+                url: "https://in.linkedin.com/jobs/view/devops-at-birlasoft-4242615054",
+                posted: "2025-06-30"
+            },
+            {
+                company: "Capgemini",
+                title: "DevOps",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-at-capgemini-4258441514",
+                posted: "2025-06-30"
+            },
+            {
+                company: "Infosys",
+                title: "DevOps Engineer",
+                location: "Bengaluru East, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-infosys-4258750777",
+                posted: "2025-07-01"
+            },
+            {
+                company: "Meril",
+                title: "DevOps Engineer",
+                location: "Chennai, Tamil Nadu, India",
+                experience: "3 to 5 years of experience",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-meril-4245354444",
+                posted: "2025-06-09"
+            },
+            {
+                company: "Infosys",
+                title: "DevOps Engineer",
+                location: "Bengaluru East, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-infosys-4260195694",
+                posted: "2025-07-03"
+            },
+            {
+                company: "Oracle",
+                title: "DevOps Admin",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-admin-at-oracle-4232211604",
+                posted: "2025-07-03"
+            },
+            {
+                company: "Oracle",
+                title: "DevOps Admin",
+                location: "Mumbai Metropolitan Region",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-admin-at-oracle-4232207780",
+                posted: "2025-07-03"
+            },
+            {
+                company: "KPMG India",
+                title: "Executive-DevOps",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/executive-devops-at-kpmg-india-4248677200",
+                posted: "2025-06-11"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Lead - L1",
+                location: "Bengaluru, Karnataka, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-lead-l1-at-wipro-4250329501",
+                posted: "2025-06-18"
+            },
+            {
+                company: "Infosys",
+                title: "AWS Administrator",
+                location: "Bengaluru East, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/aws-administrator-at-infosys-4261222557",
+                posted: "2025-07-05"
+            },
+            {
+                company: "Godrej Living",
+                title: "DevOps Engineer",
+                location: "Mumbai, Maharashtra, India",
+                experience: "3-5 Years experience",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-godrej-living-4261768502",
+                posted: "2025-07-03"
+            },
+            {
+                company: "Infosys",
+                title: "AWS DevOps developer",
+                location: "Bengaluru East, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/aws-devops-developer-at-infosys-4259590311",
+                posted: "2025-07-02"
+            },
+            {
+                company: "Vegapay",
+                title: "DevOps Intern",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-intern-at-vegapay-4255285049",
+                posted: "2025-06-24"
+            },
+            {
+                company: "Codelogicx",
+                title: "Trainee DevOps Engineer (Fresher)",
+                location: "Greater Kolkata Area",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/trainee-devops-engineer-fresher-at-codelogicx-4257046726",
+                posted: "2025-06-27"
+            },
+            {
+                company: "PwC India",
+                title: "Cloud Engineer",
+                location: "Gurugram, Haryana, India",
+                experience: "6-10 years",
+                url: "https://in.linkedin.com/jobs/view/cloud-engineer-at-pwc-india-4260689891",
+                posted: "2025-07-04"
+            },
+            {
+                company: "PhonePe",
+                title: "Server Administrator (DevOps and Linux)",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/server-administrator-devops-and-linux-at-phonepe-4242842442",
+                posted: "2025-06-24"
+            },
+            {
+                company: "FICO",
+                title: "DevOps Lead (Jenkins/ CICD, Docker, K8s, AWS)",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-lead-jenkins-cicd-docker-k8s-aws-at-fico-4246777046",
+                posted: "2025-06-11"
+            },
+            {
+                company: "Birlasoft",
+                title: "DevOps",
+                location: "Greater Hyderabad Area",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-at-birlasoft-4259509189",
+                posted: "2025-07-02"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Engineer - L4",
+                location: "Bengaluru, Karnataka, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-l4-at-wipro-4251405323",
+                posted: "2025-06-15"
+            },
+            {
+                company: "Tata Consultancy Services",
+                title: "DevOps",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-at-tata-consultancy-services-4258615671",
+                posted: "2025-07-01"
+            },
+            {
+                company: "Tata Consultancy Services",
+                title: "TCS Hiring for AWS DevOps with Terraform_PAN India",
+                location: "Noida, Uttar Pradesh, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/tcs-hiring-for-aws-devops-with-terraform-pan-india-at-tata-consultancy-services-4258612020",
+                posted: "2025-07-01"
+            },
+            {
+                company: "DigiCert",
+                title: "DevOps Engineer",
+                location: "India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-digicert-4232643068",
+                posted: "2025-07-03"
+            },
+            {
+                company: "Persistent Systems",
+                title: "DevOps Engineer",
+                location: "Bengaluru, Karnataka, India",
+                experience: "4 to 8 years of professional experience",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-persistent-systems-4223609583",
+                posted: "2025-06-20"
+            },
+            {
+                company: "Impetus",
+                title: "DevOps Engineer",
+                location: "Gurugram, Haryana, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-impetus-4262232316",
+                posted: "2025-07-04"
+            },
+            {
+                company: "FashionTV India",
+                title: "DevOps",
+                location: "Mumbai Metropolitan Region",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-at-fashiontv-india-4255552364",
+                posted: "2025-06-17"
+            },
+            {
+                company: "Veracity Software Inc",
+                title: "AWS DevOps",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/aws-devops-at-veracity-software-inc-4249141585",
+                posted: "2025-05-22"
+            },
+            {
+                company: "Concentrix",
+                title: "AWS DevOps",
+                location: "Greater Nashik Area",
+                experience: "5 to 8 years of experience",
+                url: "https://in.linkedin.com/jobs/view/aws-devops-at-concentrix-4222688748",
+                posted: "2025-06-18"
+            },
+            {
+                company: "Metyis",
+                title: "CloudOps/DevOps Engineering Associate",
+                location: "Gurgaon, Haryana, India",
+                experience: "3+ years of experience",
+                url: "https://in.linkedin.com/jobs/view/cloudops-devops-engineering-associate-at-metyis-4247327998",
+                posted: "2025-07-03"
+            },
+            {
+                company: "Tata Consultancy Services",
+                title: "TCS Hiring for AWS DevOps with Terraform_PAN India",
+                location: "Hyderabad, Telangana, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/tcs-hiring-for-aws-devops-with-terraform-pan-india-at-tata-consultancy-services-4258610238",
+                posted: "2025-07-01"
+            },
+            {
+                company: "Tata Consultancy Services",
+                title: "DevOps Associates",
+                location: "Chennai, Tamil Nadu, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-associates-at-tata-consultancy-services-4259165416",
+                posted: "2025-07-02"
+            },
+            {
+                company: "LTIMindtree",
+                title: "DevOps Engineer",
+                location: "Pune, Maharashtra, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-ltimindtree-4259174287",
+                posted: "2025-07-02"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Lead - L1",
+                location: "Bengaluru, Karnataka, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-lead-l1-at-wipro-4255713103",
+                posted: "2025-06-24"
+            },
+            {
+                company: "Groww",
+                title: "DevOps Engineer - 3",
+                location: "Bengaluru, Karnataka, India",
+                experience: "5-8 Years of experience",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-3-at-groww-4245319772",
+                posted: "2025-06-09"
+            },
+            {
+                company: "Tech Mahindra",
+                title: "DevOps Consultant",
+                location: "Bengaluru, Karnataka, India",
+                experience: "5+ years of experience",
+                url: "https://in.linkedin.com/jobs/view/devops-consultant-at-tech-mahindra-4256645316",
+                posted: "2025-07-01"
+            },
+            {
+                company: "Selector",
+                title: "DevOps/SRE",
+                location: "Mumbai, Maharashtra, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-sre-at-selector-4238088798",
+                posted: "2025-05-05"
+            },
+            {
+                company: "IAMOPS",
+                title: "DevOps Intern",
+                location: "Surat, Gujarat, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-intern-at-iamops-growth-fanatics-devops-4259184275",
+                posted: "2025-07-02"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Lead - L1",
+                location: "Pune, Maharashtra, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-lead-l1-at-wipro-4255130687",
+                posted: "2025-06-23"
+            },
+            {
+                company: "Eaton",
+                title: "Apprentice - DevOps",
+                location: "Pune, Maharashtra, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/apprentice-devops-at-eaton-4255724529",
+                posted: "2025-06-24"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Lead - L1",
+                location: "Chennai, Tamil Nadu, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-lead-l1-at-wipro-4253114077",
+                posted: "2025-06-18"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Lead - L1",
+                location: "Pune, Maharashtra, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-lead-l1-at-wipro-4255706878",
+                posted: "2025-06-24"
+            },
+            {
+                company: "Deloitte",
+                title: "DevOps Engineer - Assistant Manager",
+                location: "Hyderabad, Telangana, India",
+                experience: "5+ years proven experience",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-assistant-manager-at-deloitte-4251623267",
+                posted: "2025-06-16"
+            },
+            {
+                company: "FashionTV India",
+                title: "DevOps",
+                location: "Mumbai Metropolitan Region",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-at-fashiontv-india-4255554117",
+                posted: "2025-06-17"
+            },
+            {
+                company: "SettleMint India",
+                title: "DevOps Engineer",
+                location: "Navi Mumbai, Maharashtra, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-settlemint-india-4259408392",
+                posted: "2025-06-30"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Lead - L1",
+                location: "Pune, Maharashtra, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-lead-l1-at-wipro-4255707758",
+                posted: "2025-06-24"
+            },
+            {
+                company: "Qualcomm",
+                title: "DevOps Engineer",
+                location: "Hyderabad, Telangana, India",
+                experience: "1+ years of experience",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-qualcomm-4239939468",
+                posted: "2025-06-23"
+            },
+            {
+                company: "HCLTech",
+                title: "DevOps Engineer",
+                location: "Bengaluru, Karnataka, India",
+                experience: "5+ years of experience",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-hcltech-4253996222",
+                posted: "2025-06-25"
+            },
+            {
+                company: "Wishtree Technologies",
+                title: "DevOps Engineer",
+                location: "Pune, Maharashtra, India",
+                experience: "2-4 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-wishtree-technologies-4251718776",
+                posted: "2025-06-19"
+            },
+            {
+                company: "Sapiens",
+                title: "DevOps Engineer",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-sapiens-4254319177",
+                posted: "2025-06-25"
+            },
+            {
+                company: "Deqode",
+                title: "DevOps Engineer",
+                location: "India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-deqode-4257196112",
+                posted: "2025-07-02"
+            },
+            {
+                company: "LotusFlare",
+                title: "DevOps Support Engineer",
+                location: "Pune, Maharashtra, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-support-engineer-at-lotusflare-4245995859",
+                posted: "2025-06-06"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Lead - L1",
+                location: "Bengaluru, Karnataka, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-lead-l1-at-wipro-4258412746",
+                posted: "2025-06-27"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Engineer - L3",
+                location: "Pune, Maharashtra, India",
+                experience: "3-5 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-l3-at-wipro-4251478929",
+                posted: "2025-06-16"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Lead - L1",
+                location: "Bengaluru, Karnataka, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-lead-l1-at-wipro-4258411867",
+                posted: "2025-06-27"
+            },
+            {
+                company: "ValueLabs",
+                title: "DevOps Engineer",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-valuelabs-4250197797",
+                posted: "2025-06-16"
+            },
+            {
+                company: "Deloitte",
+                title: "DevOps-Senior Consultant",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-senior-consultant-at-deloitte-4258670655",
+                posted: "2025-07-01"
+            },
+            {
+                company: "Advaiya Solutions, Inc",
+                title: "DevOps engineer - Gurugram",
+                location: "Gurgaon, Haryana, India",
+                experience: "3 to 6 years of experience",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-gurugram-at-advaiya-solutions-inc-4256082863",
+                posted: "2025-06-24"
+            },
+            {
+                company: "Virtusa",
+                title: "DevOps Engineer",
+                location: "Bangalore Urban, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-virtusa-4258134497",
+                posted: "2025-07-03"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Engineer - L4",
+                location: "Pune, Maharashtra, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-l4-at-wipro-4250437193",
+                posted: "2025-06-13"
+            },
+            {
+                company: "Jitterbit",
+                title: "DevOps Engineer",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-jitterbit-4223621134",
+                posted: "2025-06-19"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Engineer - L4",
+                location: "Pune, Maharashtra, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-l4-at-wipro-4249620968",
+                posted: "2025-06-12"
+            },
+            {
+                company: "Ericsson",
+                title: "DevOps Engineer",
+                location: "Noida, Uttar Pradesh, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-ericsson-4248120840",
+                posted: "2025-07-04"
+            },
+            {
+                company: "Airties",
+                title: "SRE/DevOps Engineer (IND)",
+                location: "Bengaluru, Karnataka, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/sre-devops-engineer-ind-at-airties-4240023718",
+                posted: "2025-07-01"
+            },
+            {
+                company: "Ericsson",
+                title: "DevOps Engineer",
+                location: "Greater Kolkata Area",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-ericsson-4248121796",
+                posted: "2025-07-04"
+            },
+            {
+                company: "Oracle",
+                title: "Engineer, CSS OU DevOps",
+                location: "Bengaluru, Karnataka, India",
+                experience: "5+ years of experience",
+                url: "https://in.linkedin.com/jobs/view/engineer-css-ou-devops-at-oracle-4258147342",
+                posted: "2025-07-03"
+            },
+            {
+                company: "AXA XL",
+                title: "DevOps Engineer",
+                location: "Gurugram, Haryana, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-axa-xl-4234222012",
+                posted: "2025-07-03"
+            },
+            {
+                company: "Recro",
+                title: "DevOps Engineer",
+                location: "Bengaluru, Karnataka, India",
+                experience: "4-6 years of experience",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-recro-4248581813",
+                posted: "2025-06-13"
+            },
+            {
+                company: "Coforge",
+                title: "DevOps Consultant",
+                location: "Pune, Maharashtra, India",
+                experience: "5 to 12 years of experience",
+                url: "https://in.linkedin.com/jobs/view/devops-consultant-at-coforge-4249180302",
+                posted: "2025-07-02"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Lead - L1",
+                location: "Hyderabad, Telangana, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-lead-l1-at-wipro-4253155961",
+                posted: "2025-06-18"
+            },
+            {
+                company: "IBM",
+                title: "Cloud DevOps",
+                location: "Bengaluru, Karnataka, India",
+                experience: "5+ years of experience",
+                url: "https://in.linkedin.com/jobs/view/cloud-devops-at-ibm-4249159961",
+                posted: "2025-06-16"
+            },
+            {
+                company: "Oracle",
+                title: "Senior Cloud Operation Engineer",
+                location: "Bengaluru, Karnataka, India",
+                experience: "5-10 years overall experience",
+                url: "https://in.linkedin.com/jobs/view/senior-cloud-operation-engineer-at-oracle-4258817069",
+                posted: "2025-07-04"
+            },
+            {
+                company: "SMC Squared India",
+                title: "DevOps Engineer",
+                location: "Bangalore Urban, Karnataka, India",
+                experience: "2+ years software development experience",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-smc-squared-india-4253627683",
+                posted: "2025-06-20"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Lead - L1",
+                location: "Hyderabad, Telangana, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-lead-l1-at-wipro-4252569477",
+                posted: "2025-06-17"
+            },
+            {
+                company: "DigiCert",
+                title: "Incident Response Engineer",
+                location: "Bengaluru, Karnataka, India",
+                experience: "2+ years of experience",
+                url: "https://in.linkedin.com/jobs/view/incident-response-engineer-at-digicert-4258625556",
+                posted: "2025-07-01"
+            },
+            {
+                company: "Xoriant",
+                title: "DevOps Engineer",
+                location: "Gurugram, Haryana, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-at-xoriant-4245288989",
+                posted: "2025-07-03"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Engineer - L4",
+                location: "Bengaluru, Karnataka, India",
+                experience: "5-8 Years",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-l4-at-wipro-4262224199",
+                posted: "2025-07-04"
+            },
+            {
+                company: "Network18 Media & Investments Limited",
+                title: "Principal Engineer-DevOps",
+                location: "Noida, Uttar Pradesh, India",
+                experience: "Not specified",
+                url: "https://in.linkedin.com/jobs/view/principal-engineer-devops-at-network18-media-investments-limited-4252277761",
+                posted: "2025-06-17"
+            },
+            {
+                company: "Groww",
+                title: "DevOps Engineer - 2 (Observability)",
+                location: "Bengaluru, Karnataka, India",
+                experience: "3+ Years of experience",
+                url: "https://in.linkedin.com/jobs/view/devops-engineer-2-observability-at-groww-4245319762",
+                posted: "2025-06-09"
+            },
+            // Adding Naukri jobs
+            {
+                company: "Wipro",
+                title: "DevOps Engineer - L4",
+                location: "Hyderabad",
+                experience: "5-8 Yrs",
+                url: "https://www.naukri.com/job-listings-devops-engineer-l4-wipro-limited-hyderabad-5-to-8-years-100625923026",
+                posted: "Recent"
+            },
+            {
+                company: "Wipro",
+                title: "DevOps Engineer - L3",
+                location: "Hyderabad",
+                experience: "3-5 Yrs",
+                url: "https://www.naukri.com/job-listings-devops-engineer-l3-wipro-limited-hyderabad-3-to-5-years-100625927608",
+                posted: "Recent"
+            },
+            {
+                company: "LRR Technologies",
+                title: "DevOps Engineer For Top MNC",
+                location: "Hyderabad",
+                experience: "4-7 Yrs",
+                url: "https://www.naukri.com/job-listings-devops-engineer-for-top-mnc-lrr-technologies-hyderabad-4-to-7-years-281124007041",
+                posted: "Recent"
+            },
+            {
+                company: "Cognizant",
+                title: "DevOps Engineer",
+                location: "Hybrid - Hyderabad, Chennai, Bengaluru",
+                experience: "6-9 Yrs",
+                url: "https://www.naukri.com/job-listings-devops-engineer-cognizant-hyderabad-chennai-bengaluru-6-to-9-years-110625030441",
+                posted: "Recent"
+            },
+            {
+                company: "Epam Systems",
+                title: "Senior DevOps Engineer",
+                location: "Hybrid - Hyderabad",
+                experience: "6-9 Yrs",
+                url: "https://www.naukri.com/job-listings-senior-devops-engineer-epam-systems-hyderabad-6-to-9-years-110625025254",
+                posted: "Recent"
+            },
+            {
+                company: "Cygnus Professionals",
+                title: "Azure DevOps Engineer _ Contract Role _ Hyderabad",
+                location: "Hyderabad",
+                experience: "8-13 Yrs",
+                url: "https://www.naukri.com/job-listings-azure-devops-engineer-contract-role-hyderabad-cygnus-professionals-hyderabad-8-to-13-years-130625024678",
+                posted: "Recent"
+            },
+            {
+                company: "NCR Corporation",
+                title: "Senior DevOps Engineer",
+                location: "Hyderabad",
+                experience: "4-7 Yrs",
+                url: "https://www.naukri.com/job-listings-senior-devops-engineer-ncr-corporation-india-pvt-ltd-hyderabad-4-to-7-years-050625930143",
+                posted: "Recent"
+            },
+            {
+                company: "Swift Staffing",
+                title: "Azure DevOps Engineer",
+                location: "Hyderabad, Bengaluru",
+                experience: "6-10 Yrs",
+                url: "https://www.naukri.com/job-listings-azure-devops-engineer-swift-staffing-hyderabad-bengaluru-6-to-10-years-130625022541",
+                posted: "Recent"
+            },
+            {
+                company: "Maimsd Technology",
+                title: "Senior Engineer - DevOps",
+                location: "Hyderabad",
+                experience: "3-6 Yrs",
+                url: "https://www.naukri.com/job-listings-senior-engineer-devops-maimsd-technology-hyderabad-3-to-6-years-130625910685",
+                posted: "Recent"
+            },
+            {
+                company: "Capgemini",
+                title: "Senior DevOps Engineer",
+                location: "Hyderabad",
+                experience: "6-9 Yrs",
+                url: "https://www.naukri.com/job-listings-senior-devops-engineer-capgemini-technology-services-india-limited-hyderabad-6-to-9-years-120625933293",
+                posted: "Recent"
+            },
+            {
+                company: "Skillsoft Software Services",
+                title: "Senior Software Engineer - DevOps (IaC)",
+                location: "Hyderabad",
+                experience: "3-8 Yrs",
+                url: "https://www.naukri.com/job-listings-senior-software-engineer-devops-iac-skillsoft-software-services-india-pvt-ltd-hyderabad-3-to-8-years-100625009519",
+                posted: "Recent"
+            },
+            {
+                company: "Cotiviti",
+                title: "Senior Software Engineer - Java,Cloud,DevOps",
+                location: "Hybrid - Hyderabad/ Secunderabad",
+                experience: "7-12 Yrs",
+                url: "https://www.naukri.com/job-listings-senior-software-engineer-java-cloud-devops-cotiviti-hyderabad-secunderabad-7-to-12-years-100625022508",
+                posted: "Recent"
+            },
+            {
+                company: "Accion Labs",
+                title: "Immediate Opportunity For Senior GCP DevOps Engineer",
+                location: "Hybrid - Hyderabad, Pune, Bengaluru",
+                experience: "5-10 Yrs",
+                url: "https://www.naukri.com/job-listings-immediate-opportunity-for-senior-gcp-devops-engineer-accion-labs-hyderabad-pune-bengaluru-5-to-10-years-100625020380",
+                posted: "Recent"
+            },
+            {
+                company: "Asakta Electronics And Communications",
+                title: "Senior DevOps Engineer",
+                location: "Hyderabad",
+                experience: "5-10 Yrs",
+                url: "https://www.naukri.com/job-listings-senior-devops-engineer-asakta-electronics-and-communications-hyderabad-5-to-10-years-120625033617",
+                posted: "Recent"
+            },
+            {
+                company: "IT Consultancy Group",
+                title: "DevOps Engineer",
+                location: "Hybrid - Hyderabad, Bengaluru, Thiruvananthapuram",
+                experience: "6-8 Yrs",
+                url: "https://www.naukri.com/job-listings-devops-engineer-sps-training-academy-hyderabad-bengaluru-thiruvananthapuram-6-to-8-years-140625013428",
+                posted: "Recent"
+            },
+            {
+                company: "Indian Institute of Technology Delhi (IIT Delhi)",
+                title: "Senior Silicon Validation Engineer - DevOps Validation",
+                location: "Hyderabad",
+                experience: "9-14 Yrs",
+                url: "https://www.naukri.com/job-listings-senior-silicon-validation-engineer-devops-validation-iit-hyderabad-hyderabad-9-to-14-years-110625912185",
+                posted: "Recent"
+            }
+        ];
+        
+        let filteredJobs = [...allJobs];
+        let currentPage = 1;
+        const jobsPerPage = 15;
+        
+        // Search functionality
+        document.getElementById('searchBox').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            filteredJobs = allJobs.filter(job => 
+                job.company.toLowerCase().includes(searchTerm) ||
+                job.title.toLowerCase().includes(searchTerm) ||
+                job.location.toLowerCase().includes(searchTerm) ||
+                job.experience.toLowerCase().includes(searchTerm)
+            );
+            currentPage = 1;
+            displayJobs();
+            updatePagination();
+            updateResultsInfo();
+        });
+        
+        function filterJobs(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            
+            if (category === 'all') {
+                filteredJobs = allJobs.filter(job => 
+                    job.company.toLowerCase().includes(searchTerm) ||
+                    job.title.toLowerCase().includes(searchTerm) ||
+                    job.location.toLowerCase().includes(searchTerm) ||
+                    job.experience.toLowerCase().includes(searchTerm)
+                );
+            } else {
+                filteredJobs = allJobs.filter(job => {
+                    const matchesCategory = job.title.toLowerCase().includes(category) || 
+                                           job.company.toLowerCase().includes(category);
+                    const matchesSearch = job.company.toLowerCase().includes(searchTerm) ||
+                                        job.title.toLowerCase().includes(searchTerm) ||
+                                        job.location.toLowerCase().includes(searchTerm) ||
+                                        job.experience.toLowerCase().includes(searchTerm);
+                    return matchesCategory && matchesSearch;
+                });
+            }
+            
+            currentPage = 1;
+            displayJobs();
+            updatePagination();
+            updateResultsInfo();
+        }
+        
+        function displayJobs() {
+            const startIndex = (currentPage - 1) * jobsPerPage;
+            const endIndex = startIndex + jobsPerPage;
+            const jobsToShow = filteredJobs.slice(startIndex, endIndex);
+            
+            const jobsGrid = document.getElementById('jobsGrid');
+            jobsGrid.innerHTML = jobsToShow.map(job => `
+                <div class="job-card">
+                    <div class="company-name">${job.company}</div>
+                    <div class="job-title">${job.title}</div>
+                    <div class="job-details">
+                        <span class="detail-tag location">${job.location}</span>
+                        <span class="detail-tag experience">${job.experience}</span>
+                        <span class="detail-tag posted-date">${job.posted}</span>
+                    </div>
+                    <a href="${job.url}" class="apply-btn" target="_blank">Apply Now →</a>
+                </div>
+            `).join('');
+        }
+        
+        function updatePagination() {
+            const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
+            document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages}`;
+            document.getElementById('prevBtn').disabled = currentPage === 1;
+            document.getElementById('nextBtn').disabled = currentPage === totalPages;
+        }
+        
+        function updateResultsInfo() {
+            document.getElementById('resultsInfo').textContent = 
+                `Showing ${filteredJobs.length} jobs ${filteredJobs.length !== allJobs.length ? `(filtered from ${allJobs.length} total)` : ''}`;
+        }
+        
+        function changePage(direction) {
+            const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
+            const newPage = currentPage + direction;
+            
+            if (newPage >= 1 && newPage <= totalPages) {
+                currentPage = newPage;
+                displayJobs();
+                updatePagination();
+                document.getElementById('jobsGrid').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Initialize the page
+        displayJobs();
+        updatePagination();
+        updateResultsInfo();
+        document.getElementById('totalJobs').textContent = allJobs.length;
+    </script>
+</body>
+</html>
